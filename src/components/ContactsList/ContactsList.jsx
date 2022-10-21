@@ -15,15 +15,16 @@ const ContactsList = ({ contacts, onDeleteContact }) => {
     </ul>
   );
 };
-ContactsList.ppropTypes = {
+ContactsList.propTypes = {
+  onClick: PropTypes.func.isRequired,
+
   contacts: PropTypes.arrayOf(
-    (PropTypes.shape = {
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       number: PropTypes.string.isRequired,
     })
   ),
-  onDeleteContact: PropTypes.func.isRequired,
 };
 
 export default ContactsList;
